@@ -4,9 +4,10 @@
   justify-content: space-evenly;
 }
 .criminal-template {
-  margin: 4px;
+  margin: 14px;
   border: 1px solid;
-  flex-basis: 29%;
+  max-width: 250px;
+  flex-wrap: wrap;
 }
 .criminals {
   padding: 1px;
