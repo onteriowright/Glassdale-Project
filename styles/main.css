@@ -1,0 +1,34 @@
+@import "../styles/officers/officers.css";
+@import "../styles/crimes/crimes.css";
+@import "../styles/criminals/criminal.css";
+@import "../styles/convictions/convictions.css";
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #614385; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #516395,
+    #614385
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #516395,
+    #614385
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  color: #dbd4b4;
+}
+.display {
+  display: flex;
+}
+.dropdown {
+  margin: 20px;
+}
+
+.headingSection {
+  text-align: center;
+  font-size: 2.5em;
+}

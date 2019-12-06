@@ -1,0 +1,18 @@
+.criminal-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.criminal-template {
+  padding: 1px;
+  margin: 4px;
+  border: 1px solid;
+  flex-basis: 28%;
+}
+.criminals {
+  padding: 1px;
+  font-size: 15px;
+}
+.criminal-heading {
+  text-align: center;
+}
