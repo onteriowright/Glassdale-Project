@@ -5,6 +5,6 @@ import CriminalListComponent from "./criminals/CriminalListComponent.js";
 import { getConvictions } from "./convictions/ConvictionsDataProvider.js";
 import ConvictionSelect from "./convictions/ConvictionsSelectList.js";
 
-GetOfficers().then(OfficerSelectComponent);
+// GetOfficers().then(OfficerSelectComponent);
 GetCriminals().then(CriminalListComponent);
 getConvictions().then(ConvictionSelect);

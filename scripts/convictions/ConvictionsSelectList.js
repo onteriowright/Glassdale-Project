@@ -1,11 +1,26 @@
 import { UseConvictions } from "./ConvictionsDataProvider.js";
 
+const eventHub = document.querySelector("#mainContainer");
+const contentTargetHTML = document.querySelector("#convictionsContainer");
+
 const ConvictionSelect = () => {
-  const contentHTML = document.querySelector("#convictionsContainer");
   const convictions = UseConvictions();
 
+  eventHub.addEventListener("change", changeEvent => {
+    if (changeEvent.target.classList.contains("dropdown")) {
+      const selectConvictions = changeEvent.target.value;
+
+      const crime = new CustomEvent("crimeSelected", {
+        detail: {
+          crime: selectConvictions
+        }
+      });
+      eventHub.dispatchEvent(crime);
+    }
+  });
+
   const renderData = convictionsCollection => {
-    contentHTML.innerHTML += `
+    contentTargetHTML.innerHTML += `
    <select class="dropdown" id="crimeSelect">
    <option value="0">Please select a crime...</option>
     ${convictionsCollection.map(
