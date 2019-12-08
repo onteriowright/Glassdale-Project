@@ -1,6 +1,4 @@
 const CriminalComponent = criminal => {
-  console.log("I am the Criminal Component");
-
   return `
     <div class="criminal-template">
       <div class="criminals criminal-heading">
@@ -14,10 +12,7 @@ const CriminalComponent = criminal => {
         ).toLocaleString("en-us")}</div><hr>
         <div class="criminals"><strong>End:</strong> ${new Date(
           criminal.incarceration.end
-        ).toDateString("en-us")}</div><hr>
-        <div class="criminals"><strong>Arresting Officer:</strong> ${
-          criminal.arrestingOfficer
-        }</div>
+        ).toLocaleString("en-us")}</div><hr>
     </div>
   `;
 };

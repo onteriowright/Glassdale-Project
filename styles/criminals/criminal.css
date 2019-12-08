@@ -6,8 +6,7 @@
 .criminal-template {
   margin: 14px;
   border: 1px solid;
-  max-width: 250px;
-  flex-wrap: wrap;
+  max-width: 200px;
 }
 .criminals {
   padding: 1px;

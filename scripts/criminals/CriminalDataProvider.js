@@ -1,7 +1,5 @@
 let criminals = [];
 
-console.log("I am the Criminal Data Provider");
-
 export const UseCriminals = () => criminals;
 
 export const GetCriminals = () => {

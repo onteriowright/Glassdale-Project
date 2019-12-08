@@ -1,18 +1,16 @@
 import { UseCriminals } from "./CriminalDataProvider.js";
 import CriminalComponent from "./CriminalComponent.js";
 
-console.log("I am The Criminal List, I Render the Data to the DOM");
-
 const eventHub = document.querySelector("#mainContainer");
 const convicitionsTargetHTML = document.querySelector("#criminalContainer");
 
 const CriminalListComponent = () => {
-  const crimianlList = UseCriminals();
+  const criminalList = UseCriminals();
 
-  eventHub.addEventListener("crimeSelected", event => {
-    const crimeName = event.detail.crime;
+  eventHub.addEventListener("selectedConviction", event => {
+    const crimeName = event.detail.conviction;
 
-    const MatchingCriminals = crimianlList.filter(currentCriminal => {
+    const MatchingCriminals = criminalList.filter(currentCriminal => {
       if (currentCriminal.conviction === crimeName) {
         return currentCriminal;
       }
@@ -23,7 +21,10 @@ const CriminalListComponent = () => {
   const renderData = criminals => {
     convicitionsTargetHTML.innerHTML = `
     <section class="criminal-content">
-      ${criminals.map(criminal => CriminalComponent(criminal)).join("")}
+      ${criminals
+        .map(criminal => CriminalComponent(criminal))
+        .sort()
+        .join("")}
     </section>  
       `;
   };
