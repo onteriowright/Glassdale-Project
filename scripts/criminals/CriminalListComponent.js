@@ -2,7 +2,7 @@ import { UseCriminals } from "./CriminalDataProvider.js";
 import CriminalComponent from "./CriminalComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
-const convicitionsTargetHTML = document.querySelector("#criminalContainer");
+const criminalTargetHTML = document.querySelector("#criminalContainer");
 
 const CriminalListComponent = () => {
   const criminalList = UseCriminals();
@@ -19,7 +19,7 @@ const CriminalListComponent = () => {
   });
 
   const renderData = criminals => {
-    convicitionsTargetHTML.innerHTML = `
+    criminalTargetHTML.innerHTML = `
     <section class="criminal-content">
       ${criminals
         .map(criminal => CriminalComponent(criminal))
