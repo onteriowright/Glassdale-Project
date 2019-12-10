@@ -3,11 +3,11 @@ import { UseConvictions } from "./ConvictionsDataProvider.js";
 const eventHub = document.querySelector("#mainContainer");
 const contentTargetHTML = document.querySelector("#convictionsContainer");
 
-const ConvictionSelectComponent = () => {
+const ConvictionSelectListComponent = () => {
   const useConvictionsData = UseConvictions();
 
   eventHub.addEventListener("change", changeEvent => {
-    if (changeEvent.target.classList.contains("dropdown")) {
+    if (changeEvent.target.id === "crimeSelect") {
       const selectedConviction = changeEvent.target.value;
 
       const customEventListener = new CustomEvent("selectedConviction", {
@@ -32,4 +32,4 @@ const ConvictionSelectComponent = () => {
   renderData(useConvictionsData.sort());
 };
 
-export default ConvictionSelectComponent;
+export default ConvictionSelectListComponent;
