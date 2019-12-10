@@ -28,5 +28,6 @@ const CriminalListComponent = () => {
     </section>  
       `;
   };
+  renderData(criminalList);
 };
 export default CriminalListComponent;
