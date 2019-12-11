@@ -1,7 +1,7 @@
 // Bring in saved notes Data
-import { savedNotesData } from "./NotesDataProviderComponent.js";
-// Bring in notes list component
-import NotesListComponent from "./NotesListComponent.js";
+import { postSavedNotesData } from "./NotesDataProviderComponent.js";
+// Bring in show notes list component
+import ShowSavedNotesListComponent from "./ShowSavedNotesListComponent.js";
 
 // Created eventHub
 const eventHub = document.querySelector("#mainContainer");
@@ -10,7 +10,7 @@ const contentTargetElementInnerHTML = document.querySelector(
   "#notesFormContainer"
 );
 
-const NotesFormComponent = () => {
+const NotesFormListComponent = () => {
   // Add event listener to listen for click for save note
   eventHub.addEventListener("click", clickEvent => {
     // Specify what was clicked
@@ -22,7 +22,7 @@ const NotesFormComponent = () => {
         date: new Date(Date.now()).toLocaleString("en-us")
       };
       // Got saved notes Data and then display it
-      savedNotesData(newNote).then(NotesListComponent);
+      postSavedNotesData(newNote).then(ShowSavedNotesListComponent);
     }
   });
   // Add event listener to listen for click for show note
@@ -52,4 +52,4 @@ const NotesFormComponent = () => {
   renderData();
 };
 
-export default NotesFormComponent;
+export default NotesFormListComponent;

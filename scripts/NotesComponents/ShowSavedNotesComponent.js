@@ -1,5 +1,5 @@
 // I display saved notes
-const NotesComponent = note => {
+const ShowSavedNotesComponent = note => {
   return `
     <section class="notes-template">
     <div>${note.suspect}</div>
@@ -9,4 +9,4 @@ const NotesComponent = note => {
   `;
 };
 
-export default NotesComponent;
+export default ShowSavedNotesComponent;
