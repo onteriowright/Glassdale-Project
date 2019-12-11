@@ -2,6 +2,7 @@
 @import "../styles/crimes/crimes.css";
 @import "../styles/criminals/criminal.css";
 @import "../styles/convictions/convictions.css";
+@import "../styles/notes/form.css";
 
 body {
   padding: 0;
