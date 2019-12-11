@@ -8,6 +8,7 @@ export const saveNotesData = notes => {
       "content-type": "application/json"
     },
     body: JSON.stringify(notes)
+    // Update App State
   }).then(getNotesData);
 };
 

@@ -1,4 +1,4 @@
-// Bring in the notesData
+// Bring in the function to use NotesData and the function to get NotesData
 import { useNotesData, getNotesData } from "./NotesDataProviderComponent.js";
 // Bring in the showSavedNotes Component
 import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
@@ -13,7 +13,7 @@ const contentTargetElementInnerHTML = document.querySelector(
 const ShowSavedNotesListComponent = () => {
   // Create an eventListener to listen for "showNotesBtnWasClicked"
   eventHub.addEventListener("showNotesBtnWasClicked", () => {
-    // Heard "showNotesBtnWasClicked" so go get the new Data
+    // Heard "showNotesBtnWasClicked" so go get the new Data to update app state
     getNotesData().then(() => {
       // Now use the new Data
       const newNotes = useNotesData();
