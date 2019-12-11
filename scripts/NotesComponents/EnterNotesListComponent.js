@@ -38,15 +38,23 @@ const EnterNotesListComponent = () => {
   // Display Data on the DOM
   const renderData = () => {
     contentTargetElementInnerHTML.innerHTML = `
+     <section class="input">
       <h2>Add Note:</h2>
       <div class="add-notes">
-        <label><h3>Suspect Name</h3></label>
+        <label>
+          <h3>Suspect Name</h3>
+        </label>
         <input type="text" id="suspect-name">
-        <label><h3>Note</h3></label>
+        <label>
+          <h3>Note</h3>
+        </label>
         <input type="text" id="note">
-        <button id="save-note" class="btn">Save Note</button>
-        <button id="show-note" class="btn">Show Notes</button>
+        <div class="btn-placement">
+          <button id="save-note" class="btn">Save Note</button>
+          <button id="show-note" class="btn">Show Notes</button>
+        </div>
       </div>
+     </section>
       `;
   };
   renderData();

@@ -2,7 +2,7 @@ let convictions = [];
 
 export const UseConvictions = () => convictions.sort().slice();
 
-export const getConvictions = () => {
+export const GetConvictions = () => {
   return fetch("http://criminals.glassdale.us/crimes")
     .then(response => response.json())
     .then(parsedConvictions => {
