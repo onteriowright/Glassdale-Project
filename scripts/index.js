@@ -1,7 +1,7 @@
-import { GetCriminals } from "./criminals/CriminalDataProvider.js";
-import CriminalListComponent from "./criminals/CriminalListComponent.js";
-import { getConvictions } from "./convictions/ConvictionsDataProvider.js";
-import ConvictionSelectListComponent from "./convictions/ConvictionsSelectListComponent.js";
+import { GetCriminals } from "./CriminalsComponents/CriminalDataProvider.js";
+import CriminalListComponent from "./CriminalsComponents/CriminalListComponent.js";
+import { getConvictions } from "./ConvictionsComponents/ConvictionsDataProvider.js";
+import ConvictionSelectListComponent from "./ConvictionsComponents/ConvictionsSelectListComponent.js";
 import NotesFormComponent from "./NotesComponents/NotesFormComponent.js";
 import NotesListComponent from "./NotesComponents/NotesListComponent.js";
 
