@@ -26,12 +26,10 @@ const ShowSavedNotesListComponent = () => {
 // This function renders the Data to the DOM
 const renderData = notesCollection => {
   contentTargetElementInnerHTML.innerHTML = `
-  <section class="">
-    <h2>Notes:</h2>
-    <section class="display-for-notes">${notesCollection
-      .map(note => ShowSavedNotesComponent(note))
-      .join("")}
-  </section>
+    <h2 class="saved-notes-heading">Notes:</h2>
+    <section class="display-for-notes">
+      ${notesCollection.map(note => ShowSavedNotesComponent(note)).join("")}
+    </section>
   `;
 };
 
