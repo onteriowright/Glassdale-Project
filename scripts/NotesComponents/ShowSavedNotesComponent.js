@@ -2,9 +2,9 @@
 const ShowSavedNotesComponent = note => {
   return `
     <section class="notes-template">
-      <div>${note.suspect}</div>
-      <div>${note.note}</div>
-      <div>${note.date}</div>
+      <div class="notes-info">${note.suspect}</div>
+      <div class="notes-info">${note.note}</div>
+      <div class="notes-info">${note.date}</div>
     </section>  
   `;
 };

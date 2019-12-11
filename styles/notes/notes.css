@@ -15,9 +15,12 @@
 .input {
   margin: 1.2em;
 }
+.notes-info {
+  padding: 0.5em;
+}
 .notes-template {
   border: 1px solid;
-  padding: 2em;
+  padding: 1em;
   margin: 0.7em;
 }
 .saved-notes-heading {
