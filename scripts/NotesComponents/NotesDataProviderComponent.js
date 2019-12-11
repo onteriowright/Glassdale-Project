@@ -1,7 +1,7 @@
 let notesCollection = [];
 
-//  Post saved notes Data
-export const postSavedNotesData = notes => {
+//  Post saved notes Data and export it to be used by other components
+export const saveNotesData = notes => {
   return fetch("http://localhost:8088/notes", {
     method: "POST",
     headers: {
@@ -21,4 +21,4 @@ export const getNotesData = () => {
 };
 
 // Export Data to be used by other components
-export const UseNotesData = () => notesCollection;
+export const useNotesData = () => notesCollection;

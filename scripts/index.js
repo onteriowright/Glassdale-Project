@@ -6,6 +6,7 @@ import EnterNotesListComponent from "./NotesComponents/EnterNotesListComponent.j
 import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListComponent.js";
 
 getConvictions().then(ConvictionSelectListComponent);
-GetCriminals().then(CriminalListComponent);
-EnterNotesListComponent();
-ShowSavedNotesListComponent();
+GetCriminals()
+  .then(EnterNotesListComponent)
+  .then(ShowSavedNotesListComponent)
+  .then(CriminalListComponent);

@@ -1,8 +1,13 @@
-.form {
+.display-for-notes {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
-.input {
-  margin: 8px;
+.btn {
+  padding: 0.4em;
 }
-.input-btn {
-  margin: 5px;
+.notes-template {
+  border: 1px solid;
+  padding: 2em;
+  margin: 0.7em;
 }
