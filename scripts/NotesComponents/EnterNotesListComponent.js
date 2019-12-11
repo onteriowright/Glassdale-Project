@@ -21,8 +21,8 @@ const EnterNotesListComponent = () => {
         note: document.querySelector("#note").value,
         date: new Date(Date.now()).toLocaleString("en-us")
       };
-      // Got saved notes Data and then display it
-      saveNotesData(newNote).then(ShowSavedNotesListComponent);
+      // Change API state and application state
+      saveNotesData(newNote);
     }
   });
   // Add event listener to listen for click for show note
