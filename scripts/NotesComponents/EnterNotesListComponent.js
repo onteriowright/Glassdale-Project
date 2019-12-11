@@ -19,7 +19,7 @@ const EnterNotesListComponent = () => {
       const newNote = {
         suspect: document.querySelector("#suspect-name").value,
         note: document.querySelector("#note").value,
-        date: Date.now()
+        date: new Date(Date.now()).toLocaleString("en-us")
       };
       // Got saved notes Data and then display it
       saveNotesData(newNote).then(ShowSavedNotesListComponent);

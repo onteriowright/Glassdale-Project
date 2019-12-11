@@ -4,7 +4,7 @@ const ShowSavedNotesComponent = note => {
     <section class="notes-template">
     <div>${note.suspect}</div>
     <div>${note.note}</div>
-    <div>${new Date(note.date).toLocaleDateString("en-us")}</div>
+    <div>${note.date}</div>
     </section>  
   `;
 };
