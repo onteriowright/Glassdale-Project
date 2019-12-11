@@ -7,6 +7,6 @@ import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListCom
 
 GetConvictions().then(ConvictionSelectListComponent);
 GetCriminals()
+  .then(CriminalListComponent)
   .then(EnterNotesListComponent)
-  .then(ShowSavedNotesListComponent)
-  .then(CriminalListComponent);
+  .then(ShowSavedNotesListComponent);

@@ -1,6 +1,6 @@
-// Bring in the function to use NotesData and the function to get NotesData
+// Bring in useNotesData and getNotesData to update App state
 import { useNotesData, getNotesData } from "./NotesDataProviderComponent.js";
-// Bring in the showSavedNotes Component
+// Bring in the showSavedNotes Component to display saved notes
 import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
 
 // Create EventHub
@@ -26,10 +26,12 @@ const ShowSavedNotesListComponent = () => {
 // This function renders the Data to the DOM
 const renderData = notesCollection => {
   contentTargetElementInnerHTML.innerHTML = `
+  <section class="">
     <h2>Notes:</h2>
     <section class="display-for-notes">${notesCollection
       .map(note => ShowSavedNotesComponent(note))
-      .join("")}</section>
+      .join("")}
+  </section>
   `;
 };
 
