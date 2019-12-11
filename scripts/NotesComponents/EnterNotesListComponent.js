@@ -30,8 +30,8 @@ const EnterNotesListComponent = () => {
     // Specify what was clicked
     if (clickEvent.target.id === "show-note") {
       // Heard click on specified ID then created custom event listener "showNotesBtnWasClicked"
-      const message = new CustomEvent("showNotesBtnWasClicked");
-      eventHub.dispatchEvent(message);
+      const customEventListener = new CustomEvent("showNotesBtnWasClicked");
+      eventHub.dispatchEvent(customEventListener);
     }
   });
 
