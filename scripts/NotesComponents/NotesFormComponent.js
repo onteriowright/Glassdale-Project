@@ -21,7 +21,7 @@ const NotesFormComponent = () => {
         information: document.querySelector("#note-information").value,
         date: new Date(Date.now()).toLocaleString("en-us")
       };
-      // Got saved notes Data and then displayed it
+      // Got saved notes Data and then display it
       savedNotesData(newNote).then(NotesListComponent);
     }
   });
