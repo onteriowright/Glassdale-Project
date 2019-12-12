@@ -13,6 +13,7 @@ const CriminalComponent = criminal => {
         <div class="criminals"><strong>End:</strong> ${new Date(
           criminal.incarceration.end
         ).toLocaleString("en-us")}</div><hr>
+        <button id="associates--${criminal.id}">Associate Alibis</button>
     </div>
   `;
 };

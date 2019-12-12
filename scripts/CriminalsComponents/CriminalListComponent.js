@@ -18,6 +18,18 @@ const CriminalListComponent = () => {
     renderData(MatchingCriminals);
   });
 
+  eventHub.addEventListener("click", clickEvent => {
+    if (clickEvent.target.id.startsWith("associates--")) {
+      const [prefix, criminalId] = clickEvent.target.id.split("--");
+      const message = new CustomEvent("associateBtnWasClicked", {
+        detail: {
+          criminalId: criminalId
+        }
+      });
+      eventHub.dispatchEvent(message);
+    }
+  });
+
   const renderData = criminals => {
     criminalTargetHTML.innerHTML = `
     <section class="criminal-content">
