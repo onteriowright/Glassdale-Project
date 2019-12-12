@@ -3,6 +3,7 @@
 @import "../styles/criminals/criminal.css";
 @import "../styles/convictions/convictions.css";
 @import "../styles/notes/notes.css";
+@import "../styles/dialog/dialog.css";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap");
 
 body {

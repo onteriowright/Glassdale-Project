@@ -8,14 +8,13 @@ const DialogComponent = () => {
     const criminals = UseCriminals();
 
     const foundCriminal = criminals.find(
-      singleCriminal =>
-        singleCriminal.id === parseInt(event.detail.criminalId, 10)
+      singleCriminal => singleCriminal.id === parseInt(event.detail.criminalId)
     );
     const alibisHTML = foundCriminal.known_associates
       .map(singleAssociate => {
         return `
-          <div>
-            ${singleAssociate.name}: ${singleAssociate.alibi}
+          <div class="associates">
+            <strong>${singleAssociate.name}:</strong> ${singleAssociate.alibi}<hr>
           </div>
         `;
       })
@@ -29,7 +28,7 @@ const DialogComponent = () => {
     alibiTarget.innerHTML = `
       <dialog class="alibis">
         <div class="alibi-text"></div>
-        <button id="closeDialog">Close Dialog</button>
+        <button id="closeDialog" class="dialog-close-btn">Close Dialog</button>
       </dialog>  
     `;
   };
