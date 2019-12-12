@@ -9,7 +9,7 @@ const EnterNotesComponents = () => {
     <label>
       <h3>Note</h3>
     </label>
-    <input type="text" id="note">
+    <textarea rows="4" cols="30" type="text" id="note"></textarea>
     <div class="btn-placement">
       <button id="save-note" class="btn">Save Note</button>
       <button id="show-note" class="btn">Show Notes</button>
