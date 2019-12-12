@@ -1,4 +1,3 @@
-// I display saved notes
 const ShowSavedNotesComponent = note => {
   return `
     <section class="notes-template">
