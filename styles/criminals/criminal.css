@@ -4,9 +4,11 @@
   justify-content: space-evenly;
 }
 .criminal-template {
+  display: flex;
+  flex-direction: column;
   margin: 14px;
   border: 1px solid;
-  max-width: 200px;
+  max-width: 500px;
   flex-basis: 28%;
 }
 .criminals {
