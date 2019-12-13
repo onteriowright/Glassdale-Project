@@ -17,7 +17,7 @@ const ShowSavedNotesListComponent = () => {
 
 const renderData = notesCollection => {
   contentTargetElementInnerHTML.innerHTML = `
-    <h2 class="saved-notes-heading">Notes:</h2>
+    <h2 class="saved-notes-heading">Notes</h2>
     <section class="display-for-notes">
       ${notesCollection.map(note => ShowSavedNotesComponent(note)).join("")}
     </section>

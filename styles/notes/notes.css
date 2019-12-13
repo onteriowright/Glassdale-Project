@@ -1,11 +1,13 @@
+.btn {
+  position: relative;
+  padding: 0.4em;
+  margin: 0.5em;
+  right: 6px;
+}
 .display-for-notes {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-}
-.btn {
-  padding: 0.4em;
-  margin: 0.5em;
 }
 .input {
   margin: 1.2em;
