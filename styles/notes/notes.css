@@ -16,10 +16,9 @@
   font-size: 20px;
 }
 .notes-template {
+  display: flex;
+  flex-direction: column;
   border: 1px solid;
-  padding: 1em;
-  margin: 0.7em;
-  min-width: 25%;
 }
 .saved-notes-heading {
   text-align: center;
