@@ -3,7 +3,7 @@ import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
 const contentTargetElementInnerHTML = document.querySelector(
-  "#saveNotesContainer"
+  "#criminalContainer"
 );
 
 const ShowSavedNotesListComponent = () => {

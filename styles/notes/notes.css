@@ -16,7 +16,7 @@
   margin: 1.2em;
 }
 .notes-info {
-  padding: 0.5em;
+  font-size: 20px;
 }
 .notes-template {
   border: 1px solid;
@@ -24,6 +24,5 @@
   margin: 0.7em;
 }
 .saved-notes-heading {
-  position: relative;
-  left: 0.8em;
+  text-align: center;
 }
