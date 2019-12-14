@@ -14,7 +14,7 @@ const DialogComponent = () => {
       .map(singleAssociate => {
         return `
           <div class="associates">
-            <strong>${singleAssociate.name}:</strong> ${singleAssociate.alibi}<hr>
+            <strong>${singleAssociate.name}: </strong>${singleAssociate.alibi}  
           </div>
         `;
       })

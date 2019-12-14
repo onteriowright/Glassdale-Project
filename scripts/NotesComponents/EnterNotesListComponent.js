@@ -1,4 +1,4 @@
-import { saveNotesData } from "./NotesDataProviderComponent.js";
+import { saveNotes } from "./NotesDataProviderComponent.js";
 import EnterNotesComponents from "./EnterNotesComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
@@ -14,9 +14,10 @@ const EnterNotesListComponent = () => {
         note: document.querySelector("#note").value,
         date: new Date(Date.now()).toLocaleString("en-us")
       };
-      saveNotesData(newNote);
+      saveNotes(newNote);
     }
   });
+
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "show-note") {
       const customEventListener = new CustomEvent("showNotesBtnWasClicked");

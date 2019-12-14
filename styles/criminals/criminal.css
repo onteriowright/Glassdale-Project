@@ -10,6 +10,7 @@
   border: 1px solid;
   max-width: 500px;
   flex-basis: 28%;
+  padding: 5px;
 }
 .criminals {
   padding: 3px;

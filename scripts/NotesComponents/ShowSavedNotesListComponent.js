@@ -1,4 +1,8 @@
-import { useNotesData, getNotesData } from "./NotesDataProviderComponent.js";
+import {
+  useNotes,
+  getNotes,
+  deleteNote
+} from "./NotesDataProviderComponent.js";
 import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
@@ -7,13 +11,27 @@ const contentTargetElementInnerHTML = document.querySelector(
 );
 
 const ShowSavedNotesListComponent = () => {
-  eventHub.addEventListener("showNotesBtnWasClicked", () => {
-    getNotesData().then(() => {
-      const newNotes = useNotesData();
+  const reRenderNotes = () => {
+    getNotes().then(() => {
+      const newNotes = useNotes();
       renderData(newNotes);
     });
+  };
+
+  eventHub.addEventListener("showNotesBtnWasClicked", () => {
+    reRenderNotes();
   });
 };
+
+eventHub.addEventListener("click", clickEvent => {
+  if (clickEvent.target.id.startsWith("deleteNote--")) {
+    const [prefix, id] = clickEvent.target.id.split("--");
+    deleteNote(id).then(() => {
+      const newNotes = useNotes();
+      renderData(newNotes);
+    });
+  }
+});
 
 const renderData = notesCollection => {
   contentTargetElementInnerHTML.innerHTML = `

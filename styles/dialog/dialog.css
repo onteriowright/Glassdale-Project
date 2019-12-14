@@ -1,12 +1,10 @@
-.alibis {
-  padding: 1px;
-  min-width: 20%;
-}
-.dialog-open-btn {
-}
-.dialog-close-btn {
-}
 .associates {
-  /* padding: 1px; */
+  display: flex;
+  flex-direction: column;
   font-size: 1.1em;
+  padding: 5px;
+}
+.alibis {
+  padding: 2em;
+  min-width: 20%;
 }
