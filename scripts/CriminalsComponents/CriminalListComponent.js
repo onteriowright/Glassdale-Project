@@ -1,4 +1,4 @@
-import { UseCriminals } from "./CriminalDataProvider.js";
+import { UseCriminals, GetCriminals } from "./CriminalDataProvider.js";
 import CriminalComponent from "./CriminalComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
@@ -9,6 +9,12 @@ const CriminalListComponent = () => {
 
   eventHub.addEventListener("selectedConviction", event => {
     const crimeName = event.detail.conviction;
+    if (crimeName === "0") {
+      GetCriminals().then(() => {
+        const useCriminals = UseCriminals();
+        renderData(useCriminals);
+      });
+    }
 
     const MatchingCriminals = criminalList.filter(currentCriminal => {
       if (currentCriminal.conviction === crimeName) {

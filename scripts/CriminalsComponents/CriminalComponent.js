@@ -14,23 +14,25 @@ const CriminalComponent = criminal => {
           criminal.incarceration.end
         ).toLocaleString("en-us")}</div>
         <button id="associates--${criminal.id}">Show Associate Alibis</button>
-
-        <dialog>
-          <div class="associates">
-            ${criminal.known_associates
-              .map(
-                associate =>
-                  `<div class="associates-card">
-                    <span class="dialog-titles">Associates Name:</span> ${associate.name}<br>
-                    <span class="dialog-titles">Alibi:</span> ${associate.alibi}
-                  </div><br>`
-              )
-              .join(" ")}
-          </div>
-          <button id="closeBtn">Close Dialog</button>
-        </dialog>
     </div>
   `;
 };
 
 export default CriminalComponent;
+
+{
+  /* <dialog>
+<div class="associates">
+  ${criminal.known_associates
+    .map(
+      associate =>
+        `<div class="associates-card">
+          <span class="dialog-titles">Associates Name:</span> ${associate.name}<br>
+          <span class="dialog-titles">Alibi:</span> ${associate.alibi}
+        </div><br>`
+    )
+    .join(" ")}
+</div>
+<button id="closeBtn">Close Dialog</button>
+</dialog> */
+}

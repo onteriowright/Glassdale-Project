@@ -5,11 +5,11 @@ import ConvictionSelectListComponent from "./ConvictionsComponents/ConvictionsSe
 
 import EnterNotesListComponent from "./NotesComponents/EnterNotesListComponent.js";
 import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListComponent.js";
-import DialogComponent from "./DialogComponent/Dialog.js";
+import DialogListComponent from "./DialogComponents/Dialog.js";
 
 GetConvictions().then(ConvictionSelectListComponent);
 GetCriminals()
   .then(CriminalListComponent)
   .then(EnterNotesListComponent)
   .then(ShowSavedNotesListComponent)
-  .then(DialogComponent);
+  .then(DialogListComponent);
