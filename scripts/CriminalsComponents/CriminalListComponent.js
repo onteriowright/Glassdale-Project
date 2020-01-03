@@ -21,7 +21,26 @@ const CriminalListComponent = () => {
         return currentCriminal;
       }
     });
+    console.log(MatchingCriminals);
     renderData(MatchingCriminals);
+  });
+
+  eventHub.addEventListener("officerSelected", event => {
+    const selectedOfficer = event.detail.selectedOfficer;
+    if (selectedOfficer === "0") {
+      GetCriminals().then(() => {
+        const useCriminals = UseCriminals();
+        renderData(useCriminals);
+      });
+    }
+    console.log(selectedOfficer);
+    const matchingOfficers = criminalList.filter(officer => {
+      if (officer.arrestingOfficer === selectedOfficer) {
+        return officer;
+      }
+    });
+    console.log(matchingOfficers);
+    renderData(matchingOfficers);
   });
 
   eventHub.addEventListener("click", clickEvent => {

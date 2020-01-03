@@ -24,7 +24,7 @@ const ConvictionSelectListComponent = () => {
    <select class="dropdown" id="crimeSelect">
     <option value="0">Please select a crime...</option>
      ${convictionsCollection.map(
-       conviction => `<option>${conviction}</option>`
+       conviction => `<option value="${conviction}">${conviction}</option>`
      )}
    </select>
     `;

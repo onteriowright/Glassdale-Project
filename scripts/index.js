@@ -6,8 +6,11 @@ import ConvictionSelectListComponent from "./ConvictionsComponents/ConvictionsSe
 import EnterNotesListComponent from "./NotesComponents/EnterNotesListComponent.js";
 import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListComponent.js";
 import DialogListComponent from "./DialogComponents/Dialog.js";
+import { GetOfficers } from "./OfficersComponents/OfficerDataProvider.js";
+import OfficerSelectComponent from "./OfficersComponents/OfficerSelectComponent.js";
 
 GetConvictions().then(ConvictionSelectListComponent);
+GetOfficers().then(OfficerSelectComponent);
 GetCriminals()
   .then(CriminalListComponent)
   .then(EnterNotesListComponent)
