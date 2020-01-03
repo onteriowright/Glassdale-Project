@@ -17,9 +17,7 @@ const CriminalListComponent = () => {
     }
 
     const MatchingCriminals = criminalList.filter(currentCriminal => {
-      if (currentCriminal.conviction === crimeName) {
-        return currentCriminal;
-      }
+      return currentCriminal.conviction === crimeName;
     });
     renderData(MatchingCriminals);
   });
@@ -32,11 +30,9 @@ const CriminalListComponent = () => {
         renderData(useCriminals);
       });
     }
-    
+
     const matchingOfficers = criminalList.filter(officer => {
-      if (officer.arrestingOfficer === selectedOfficer) {
-        return officer;
-      }
+      return officer.arrestingOfficer === selectedOfficer;
     });
     renderData(matchingOfficers);
   });
