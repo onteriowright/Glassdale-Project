@@ -21,7 +21,6 @@ const CriminalListComponent = () => {
         return currentCriminal;
       }
     });
-    console.log(MatchingCriminals);
     renderData(MatchingCriminals);
   });
 
@@ -39,7 +38,6 @@ const CriminalListComponent = () => {
         return officer;
       }
     });
-    console.log(matchingOfficers);
     renderData(matchingOfficers);
   });
 
