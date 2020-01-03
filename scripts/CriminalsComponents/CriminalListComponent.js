@@ -32,7 +32,7 @@ const CriminalListComponent = () => {
         renderData(useCriminals);
       });
     }
-    console.log(selectedOfficer);
+    
     const matchingOfficers = criminalList.filter(officer => {
       if (officer.arrestingOfficer === selectedOfficer) {
         return officer;
