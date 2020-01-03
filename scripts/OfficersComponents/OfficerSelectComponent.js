@@ -20,7 +20,7 @@ const OfficerSelectComponent = () => {
   const renderData = officerCollection => {
     officerHTML.innerHTML += `
    <select class="dropdown" id="officerSelect">
-    <option value="0">Please select an officer...</option>
+    <option value="0">Filter by officer...</option>
     ${officerCollection.map(
       officer => `<option value="${officer}">${officer}</option>`
     )}

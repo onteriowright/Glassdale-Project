@@ -22,7 +22,7 @@ const ConvictionSelectListComponent = () => {
   const renderData = convictionsCollection => {
     contentTargetHTML.innerHTML = `
    <select class="dropdown" id="crimeSelect">
-    <option value="0">Please select a crime...</option>
+    <option value="0">Filter by crime...</option>
      ${convictionsCollection.map(
        conviction => `<option value="${conviction}">${conviction}</option>`
      )}
