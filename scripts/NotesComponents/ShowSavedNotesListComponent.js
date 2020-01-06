@@ -1,8 +1,7 @@
 import {
   useNotes,
   getNotes,
-  deleteNote,
-  editNotes
+  deleteNote
 } from "./NotesDataProviderComponent.js";
 import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
 
