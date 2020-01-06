@@ -1,8 +1,15 @@
-.btn {
-  position: relative;
-  padding: 0.4em;
-  margin: 0.5em;
-  right: 6px;
+summary:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+.btn-note {
+  margin: 5px;
+  width: 100px;
+}
+.delete-edit-btns {
+  display: flex;
+  justify-content: center;
 }
 .display-for-notes {
   display: flex;
@@ -14,6 +21,7 @@
 }
 .notes-info {
   font-size: 20px;
+  margin: 15px;
 }
 .notes-template {
   display: flex;
@@ -24,4 +32,7 @@
 }
 .saved-notes-heading {
   text-align: center;
+}
+.summary {
+  font-size: 25px;
 }

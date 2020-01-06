@@ -27,7 +27,7 @@ const OfficerSelectComponent = () => {
    </select>
   `;
   };
-  renderData(useOfficers.sort());
+  renderData(useOfficers);
 };
 
 export default OfficerSelectComponent;
