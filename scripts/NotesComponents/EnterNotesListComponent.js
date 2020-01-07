@@ -37,8 +37,8 @@ const EnterNotesListComponent = () => {
         };
 
         editNotes(editedNote).then(() => {
-          const customEventListener = new CustomEvent("notHasBeenEdited");
-          eventHub.dispatchEvent(customEventListener);
+          const noteHasBeenEditedCustomEventListener = new CustomEvent("noteHasBeenEdited");
+          eventHub.dispatchEvent(noteHasBeenEditedCustomEventListener);
         });
       } else {
         const newNote = {
@@ -47,8 +47,8 @@ const EnterNotesListComponent = () => {
           date: new Date(Date.now()).toLocaleString("en-us")
         };
         saveNotes(newNote).then(() => {
-          const customEventListener = new CustomEvent("noteCreated");
-          eventHub.dispatchEvent(customEventListener);
+          const noteCreatedCustomEventListener = new CustomEvent("noteCreated");
+          eventHub.dispatchEvent(noteCreatedCustomEventListener);
         });
       }
     }
@@ -56,8 +56,8 @@ const EnterNotesListComponent = () => {
 
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "show-note") {
-      const customEventListener = new CustomEvent("showNotesBtnWasClicked");
-      eventHub.dispatchEvent(customEventListener);
+      const showNotesBtnClickedCustomEventListener = new CustomEvent("showNotesBtnWasClicked");
+      eventHub.dispatchEvent(showNotesBtnClickedCustomEventListener);
     }
   });
 

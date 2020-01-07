@@ -6,7 +6,6 @@ export const getCrimes = () => {
   return fetch("http://criminals.glassdale.us/crimes")
     .then(response => response.json())
     .then(parsedCrimes => {
-      // console.table(parsedCrimes);
-      crimeCollection = parsedCrimes;
+      crimeCollection = parsedCrimes.slice();
     });
 };

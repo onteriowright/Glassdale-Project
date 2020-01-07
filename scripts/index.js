@@ -5,14 +5,14 @@ import ConvictionSelectListComponent from "./ConvictionsComponents/ConvictionsSe
 
 import EnterNotesListComponent from "./NotesComponents/EnterNotesListComponent.js";
 import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListComponent.js";
-import DialogListComponent from "./DialogComponents/Dialog.js";
+import AlibiDialogListComponent from "./DialogComponents/AlibiDialogListComponent.js";
 import { GetOfficers } from "./OfficersComponents/OfficerDataProvider.js";
-import OfficerSelectComponent from "./OfficersComponents/OfficerSelectComponent.js";
+import OfficerSelectListComponent from "./OfficersComponents/OfficerSelectListComponent.js";
 
 GetConvictions().then(ConvictionSelectListComponent);
-GetOfficers().then(OfficerSelectComponent);
+GetOfficers().then(OfficerSelectListComponent);
 GetCriminals()
   .then(CriminalListComponent)
   .then(EnterNotesListComponent)
   .then(ShowSavedNotesListComponent)
-  .then(DialogListComponent);
+  .then(AlibiDialogListComponent);

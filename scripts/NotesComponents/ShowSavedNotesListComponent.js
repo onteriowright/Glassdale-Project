@@ -11,20 +11,15 @@ const ShowSavedNotesListComponent = () => {
     "#criminalContainer"
   );
 
-  eventHub.addEventListener("noteHasBeenEdited", clickEvent => {
-    const upDateNotes = useNotes();
-    renderData(upDateNotes);
-  });
-
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id.startsWith("editNote--")) {
       const [prefix, noteId] = clickEvent.target.id.split("--");
-      const editNoteEvent = new CustomEvent("editBtnClicked", {
+      const customEditNoteEventId = new CustomEvent("editBtnClicked", {
         detail: {
           noteId: noteId
         }
       });
-      eventHub.dispatchEvent(editNoteEvent);
+      eventHub.dispatchEvent(customEditNoteEventId);
     }
   });
 
@@ -36,6 +31,11 @@ const ShowSavedNotesListComponent = () => {
         renderData(newNotes);
       });
     }
+  });
+
+  eventHub.addEventListener("noteHasBeenEdited", clickEvent => {
+    const upDateNotes = useNotes();
+    renderData(upDateNotes);
   });
 
   eventHub.addEventListener("noteCreated", clickEvent => {

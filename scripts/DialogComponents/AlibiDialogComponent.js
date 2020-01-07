@@ -1,4 +1,4 @@
-export const DialogComponent = () => {
+export const AlibiDialogComponent = () => {
   return `
   <dialog id="alibis">
     <div id="alibi-text"></div>

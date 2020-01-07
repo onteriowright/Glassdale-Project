@@ -6,6 +6,6 @@ export const GetOfficers = () => {
   return fetch("http://criminals.glassdale.us/officers")
     .then(response => response.json())
     .then(parsedOfficers => {
-      officers = parsedOfficers;
+      officers = parsedOfficers.slice();
     });
 };

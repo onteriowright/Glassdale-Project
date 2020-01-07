@@ -1,11 +1,10 @@
 import { UseConvictions } from "./ConvictionsDataProvider.js";
+import { ConvictionsComponent } from "./ConvictionsComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
 const contentTargetHTML = document.querySelector("#convictionsContainer");
 
 const ConvictionSelectListComponent = () => {
-  const useConvictionsData = UseConvictions();
-
   eventHub.addEventListener("change", changeEvent => {
     if (changeEvent.target.id === "crimeSelect") {
       const selectedConviction = changeEvent.target.value;
@@ -21,15 +20,13 @@ const ConvictionSelectListComponent = () => {
 
   const renderData = convictionsCollection => {
     contentTargetHTML.innerHTML = `
-   <select class="dropdown" id="crimeSelect">
-    <option value="0">Filter by crime...</option>
-     ${convictionsCollection.map(
-       conviction => `<option value="${conviction}">${conviction}</option>`
-     )}
-   </select>
+    <section>
+    ${ConvictionsComponent(convictionsCollection)}
+    </section>
     `;
   };
-  renderData(useConvictionsData.sort());
+  const useConvictionsData = UseConvictions();
+  renderData(useConvictionsData);
 };
 
 export default ConvictionSelectListComponent;

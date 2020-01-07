@@ -6,7 +6,6 @@ export const GetConvictions = () => {
   return fetch("http://criminals.glassdale.us/crimes")
     .then(response => response.json())
     .then(parsedConvictions => {
-      // console.table(parsedConvictions);
-      convictions = parsedConvictions;
+      convictions = parsedConvictions.slice();
     });
 };

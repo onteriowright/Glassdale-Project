@@ -1,10 +1,10 @@
 import { UseCriminals } from "../CriminalsComponents/CriminalDataProvider.js";
-import { DialogComponent } from "./DialogComponent.js";
+import { AlibiDialogComponent } from "./AlibiDialogComponent.js";
 
 const eventHub = document.querySelector("#mainContainer");
 const alibiTarget = document.querySelector("#alibiContainer");
 
-const DialogListComponent = () => {
+const AlibiDialogListComponent = () => {
   eventHub.addEventListener("associateBtnWasClicked", event => {
     const criminals = UseCriminals();
 
@@ -34,9 +34,9 @@ const DialogListComponent = () => {
 
   const renderData = () => {
     alibiTarget.innerHTML = `
-        ${DialogComponent()}
+        ${AlibiDialogComponent()}
       `;
   };
   renderData();
 };
-export default DialogListComponent;
+export default AlibiDialogListComponent;
