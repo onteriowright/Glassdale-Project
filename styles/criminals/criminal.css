@@ -8,8 +8,8 @@
   flex-direction: column;
   margin: 14px;
   border: 1px solid;
-  max-width: 500px;
-  flex-basis: 28%;
+  max-width: 250px;
+  flex-basis: 22%;
   padding: 5px;
 }
 .criminals {

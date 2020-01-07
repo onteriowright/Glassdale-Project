@@ -25,7 +25,9 @@ body {
   color: #dbd4b4;
   font-family: "Open Sans Condensed", sans-serif;
 }
-
+.alibis-info {
+  margin: 20px;
+}
 .dropdown {
   margin: 20px;
 }
@@ -36,4 +38,8 @@ body {
 }
 .filter {
   display: flex;
+}
+.notes-and-select {
+  position: relative;
+  left: 15px;
 }

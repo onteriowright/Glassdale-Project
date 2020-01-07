@@ -14,15 +14,15 @@ const DialogListComponent = () => {
     const alibisHTML = foundCriminal.known_associates
       .map(singleAssociate => {
         return `
-              <div>
-                  ${singleAssociate.name}: ${singleAssociate.alibi}
+              <div class="alibis-info">
+                  <strong>${singleAssociate.name}:</strong> ${singleAssociate.alibi}
               </div>
           `;
       })
       .join("");
 
-    document.querySelector(".alibi-text").innerHTML = alibisHTML;
-    document.querySelector(".alibis").showModal();
+    document.querySelector("#alibi-text").innerHTML = alibisHTML;
+    document.querySelector("#alibis").showModal();
   });
 
   eventHub.addEventListener("click", e => {
