@@ -1,7 +1,7 @@
 import { UseCriminals } from "../CriminalsComponents/CriminalDataProvider.js";
 import { AlibiDialogComponent } from "./AlibiDialogComponent.js";
 
-const eventHub = document.querySelector("#mainContainer");
+const eventHub = document.querySelector("#container");
 const alibiTarget = document.querySelector("#alibiContainer");
 
 const AlibiDialogListComponent = () => {
@@ -34,7 +34,9 @@ const AlibiDialogListComponent = () => {
 
   const renderData = () => {
     alibiTarget.innerHTML = `
+      <section class="main-alibi">
         ${AlibiDialogComponent()}
+      </section>
       `;
   };
   renderData();

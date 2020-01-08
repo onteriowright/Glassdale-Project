@@ -1,7 +1,7 @@
 import { UseOfficers } from "./OfficerDataProvider.js";
 
 const OfficerSelectComponent = () => {
-  const eventHub = document.querySelector("#mainContainer");
+  const eventHub = document.querySelector("#container");
   const officerHTML = document.querySelector("#officersContainer");
   const useOfficers = UseOfficers();
 

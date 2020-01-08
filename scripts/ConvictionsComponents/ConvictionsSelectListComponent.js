@@ -1,7 +1,7 @@
 import { UseConvictions } from "./ConvictionsDataProvider.js";
 import { ConvictionsComponent } from "./ConvictionsComponent.js";
 
-const eventHub = document.querySelector("#mainContainer");
+const eventHub = document.querySelector("#container");
 const contentTargetHTML = document.querySelector("#convictionsContainer");
 
 const ConvictionSelectListComponent = () => {

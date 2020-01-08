@@ -40,6 +40,13 @@ body {
 .filter {
   display: flex;
 }
+.filter-btn {
+  position: relative;
+  width: 100px;
+  height: 27px;
+  top: 20px;
+  left: 15px;
+}
 .notes-and-select {
   position: relative;
   left: 15px;

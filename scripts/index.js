@@ -8,11 +8,13 @@ import ShowSavedNotesListComponent from "./NotesComponents/ShowSavedNotesListCom
 import AlibiDialogListComponent from "./DialogComponents/AlibiDialogListComponent.js";
 import { GetOfficers } from "./OfficersComponents/OfficerDataProvider.js";
 import OfficerSelectListComponent from "./OfficersComponents/OfficerSelectListComponent.js";
+import { FilterBtnListComponent } from "./FilterComponents/FilterListComponent.js";
 
 GetConvictions().then(ConvictionSelectListComponent);
 GetOfficers().then(OfficerSelectListComponent);
 GetCriminals()
   .then(CriminalListComponent)
   .then(EnterNotesListComponent)
+  .then(FilterBtnListComponent)
   .then(ShowSavedNotesListComponent)
   .then(AlibiDialogListComponent);

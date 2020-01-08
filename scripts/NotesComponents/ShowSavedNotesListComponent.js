@@ -6,7 +6,7 @@ import {
 import ShowSavedNotesComponent from "./ShowSavedNotesComponent.js";
 
 const ShowSavedNotesListComponent = () => {
-  const eventHub = document.querySelector("#mainContainer");
+  const eventHub = document.querySelector("#container");
   const contentTargetElementInnerHTML = document.querySelector(
     "#criminalContainer"
   );

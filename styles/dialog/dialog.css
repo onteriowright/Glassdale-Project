@@ -15,3 +15,6 @@
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: bold;
 }
+.dialog-close-btn {
+  width: 100%;
+}

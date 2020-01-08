@@ -5,7 +5,7 @@ import {
 } from "./NotesDataProviderComponent.js";
 import EnterNotesComponents from "./EnterNotesComponent.js";
 
-const eventHub = document.querySelector("#mainContainer");
+const eventHub = document.querySelector("#container");
 const contentTargetElementInnerHTML = document.querySelector(
   "#notesFormContainer"
 );
@@ -37,7 +37,9 @@ const EnterNotesListComponent = () => {
         };
 
         editNotes(editedNote).then(() => {
-          const noteHasBeenEditedCustomEventListener = new CustomEvent("noteHasBeenEdited");
+          const noteHasBeenEditedCustomEventListener = new CustomEvent(
+            "noteHasBeenEdited"
+          );
           eventHub.dispatchEvent(noteHasBeenEditedCustomEventListener);
         });
       } else {
@@ -56,7 +58,9 @@ const EnterNotesListComponent = () => {
 
   eventHub.addEventListener("click", clickEvent => {
     if (clickEvent.target.id === "show-note") {
-      const showNotesBtnClickedCustomEventListener = new CustomEvent("showNotesBtnWasClicked");
+      const showNotesBtnClickedCustomEventListener = new CustomEvent(
+        "showNotesBtnWasClicked"
+      );
       eventHub.dispatchEvent(showNotesBtnClickedCustomEventListener);
     }
   });
