@@ -18,7 +18,7 @@ const CriminalComponent = criminal => {
         }</div>
         <button id="associates--${
           criminal.id
-        }" class="associates-btn">Show Associate & Alibis</button>
+        }" class="associates-btn">Show Associates & Alibis</button>
     </div>
   `;
 };
